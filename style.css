@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(124deg, black 58%, #f34563 141%);
+}
+
+.main {
+    background-image: url("assets/images/luffy.jpeg");
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 70vh;
+    position: relative;
+}
+
+.main .bg-video video,
+.main .bg-image img {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.main .bg-video video {
+    opacity: 1;
+    z-index: 1;
+}
+
+.main .bg-image img {
+    z-index: 2;
+}
+
+.main .box {
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0.69;
+    background-color: black;
+    z-index: 9;
+}
+
+nav {
+    max-width: 90vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 10vh;
+}
+
+nav .sidebar {
+    position: relative;
+    z-index: 10;
+}
+
+nav img {
+    width: 130px;
+    position: relative;
+    z-index: 10;
+}
+
+nav a {
+    display: inline-block;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 15;
+    padding: 3px 10px;
+    transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.login a {
+    background-color: rgb(189, 85, 102);
+    border-radius: 6px;
+    box-shadow: 0 0 10px black;
+}
+
+.login a:hover {
+    color: white;
+    box-shadow: 0 0 10px rgb(189, 85, 102);
+}
+
+nav a:hover {
+    transform: scale(1.3);
+    color: rgb(250, 131, 151);
+}
+
+.change {
+    position: absolute;
+    z-index: 100;
+    bottom: 5%;
+    right: 2%;
+}
+
+.change i {
+    font-size: 1.8rem;
+    transition: transform 0.4s ease, text-shadow 0.5s ease;
+}
+
+.change i:hover {
+    transform: scale(1.2);
+    text-shadow: 0 0 10px whitesmoke;
+    cursor: pointer;
+}
+
+.main>input:checked~.bg-video video {
+    opacity: 0;
+}
+
+.main>input:checked~.bg-image img {
+    opacity: 1;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    height: calc(100% - 62px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 15;
+    padding: 0 0.5rem;
+    gap: 1.5rem;
+}
+
+.hero-btn {
+    position: relative;
+    width: 90%;
+    max-width: 30rem;
+    transition: transform 0.4s ease;
+}
+
+.hero span {
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.hero-btn input {
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 0.9rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px black;
+}
+
+.hero-btn i {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: text-shadow 0.4s ease;
+}
+
+.hero-btn i:hover {
+    text-shadow: 0 0 10px rgb(193, 15, 45);
+}
+
+.hero-btn:hover {
+    transform: scale(1.1);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    width: 250px;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar i {
+    color: white;
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    font-size: 1.5rem;
+    z-index: 40;
+    transition: transform 0.4s ease;
+}
+
+.sidebar i:hover {
+    transform: scale(1.2);
+}
+
+.sidebar .side {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 15px;
+    gap: 2rem;
+    background-color: rgb(241, 98, 122);
+    transition: left 0.4s ease;
+    pointer-events: none;
+}
+
+.side a {
+    color: white;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.side a:hover {
+    text-shadow: 0 0 5px whitesmoke;
+}
+
+#sidex:checked~.sidebar {
+    left: 0;
+}
+
+#sidex:checked~.sidebar .side {
+    left: 0;
+    pointer-events: all;
+}
+
+.separation {
+    width: 100%;
+    height: 9px;
+    position: absolute;
+    z-index: 20;
+    background: rgb(45, 44, 44);
+    bottom: 0;
+}
+
+.first {
+    position: relative;
+    width: 100vw;
+    margin: auto;
+    gap: 35px;
+}
+
+.first .heading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.card-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+}
+
+.card {
+    position: relative;
+}
+
+.card .play-btn {
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    -webkit-text-stroke: 1px black;
+}
+
+.card figcaption {
+    color: white;
+}
+
+.card img {
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.5s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgb(241, 199, 206);
+}
+
+.card:hover .play-btn {
+    opacity: 1;
+}
+
+.separation2 {
+    width: 100%;
+    height: 9px;
+    background-color: rgb(45, 44, 44);
+}
+
+.last {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.last .block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: smaller;
+}
+
+.last .block a {
+    color: pink;
+}
+
+footer {
+    background-color: black;
+    padding-bottom: 2rem;
+    text-align: center;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otaku-The anime paradise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <input type="checkbox" name="pause" id="pause" hidden>
+        <span class="bg-video">
+            <video autoplay muted loop>
+                <source src="assets/videos/amv.mp4" type="video/mp4">
+            </video>
+        </span>
+
+        <span class="bg-image">
+            <img src="assets/images/luffy.jpeg">
+        </span>
+
+        <nav>
+            <span><img src="assets/images/logo2.png" alt="logo"></span>
+            <div>
+                <a href="#">Home</a>
+                <a href="#">Movie</a>
+                <a href="#">TV</a>
+                <a href="#">About</a>
+            </div>
+            <div class="login">
+                <a href="#">Login</a>
+            </div>
+        </nav>
+        <div class="box"></div>
+
+        <div class="change">
+            <label for="pause">
+                <i class="fa-solid fa-circle" style="color: white;"></i>
+            </label>
+        </div>
+
+        <div class="hero">
+            <span>Search your favourite anime</span>
+            <div class="hero-btn">
+                <input type="text" placeholder="Type here" id="search">
+                <i class="fa-solid fa-search" style="color: rgb(255, 46, 81);"></i>
+            </div>
+        </div>
+
+        <input type="checkbox" id="sidex" hidden>
+        <div class="sidebar">
+            <label for="sidex">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <div class="side">
+                <a href="home.html">Home</a>
+                <a href="#">Movie</a>
+                <a href="#">TV</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+
+        <div class="separation"></div>
+
+    </div>
+
+    <section class="first">
+        <div class="heading">
+            Most popular
+        </div>
+
+        <div class="card-box">
+            <div class="card">
+                <figure>
+                    <a href="onepiece.html"><img src="assets/images/poster1.jpeg" alt="" width="250px"></a>
+                    <figcaption style="text-align: center;">One Piece film Red</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster2.jpg" alt="" width="238px"></a>
+                    <figcaption style="text-align: center;">Chainsaw man</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster3.jpg" alt="" width="253px"></a>
+                    <figcaption style="text-align: center;">Naruto shippuden</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster4.jpg" alt="" width="253px"></a>
+                    <figcaption style="text-align: center;">Solo leveling</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster5.png" alt="" width="253px"></a>
+                    <figcaption style="text-align: center;">Jujutsu kaisen season 2</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster6.png" alt="" width="253px"></a>
+                    <figcaption style="text-align: center;">Demon slayer kimetsu no yaiba</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster7.jpg" alt="" width="233px"></a>
+                    <figcaption style="text-align: center;">Bleach</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster8.jpg" alt="" width="233px"></a>
+                    <figcaption style="text-align: center;">Attack on titan</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+            <div class="card">
+                <figure>
+                    <a href="#"><img src="assets/images/poster9.jpg" alt="" width="255px"></a>
+                    <figcaption style="text-align: center;">Dan Da Dan</figcaption>
+                </figure>
+                <span class="play-btn"><i class="fa-solid fa-play" style="color: white;"></i></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="separation2"></div>
+
+    <section class="last" style="background-color: black;">
+        <div class="block">
+            <a href="#">FAQ</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Privacy</a>
+            <a href="#">Speed Test</a>
+        </div>
+
+        <div class="block">
+            <a href="#">Help Centre</a>
+            <a href="#">Jobs</a>
+            <a href="#">Cookie preference</a>
+            <a href="#">Legal Notices</a>
+        </div>
+
+        <div class="block">
+            <a href="#">Account</a>
+            <a href="#">Ways to Watch</a>
+            <a href="#">Corporate information</a>
+            <a href="#">Only on Otaku</a>
+        </div>
+
+        <div class="block">
+            <a href="#">Media Centre</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <span style="color: white;">Copyright &copy; 2025</span>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.bg {
+    background-image: url(assets/images/bg.jpeg);
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: -20px;
+    bottom: -30px;
+    left: -20px;
+    right: -40px;
+    filter: blur(10px);
+    z-index: 0;
+    transform: scale(1);
+    opacity: 1;
+    animation: blurIntro 3s ease;
+}
+
+@keyframes blurIntro {
+    0% {
+        filter: blur(0px);
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(10px);
+        opacity: 1;
+    }
+}
+
+.dabba {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.545);
+    position: absolute;
+    animation: bgcolor 3s ease;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0.545);
+    }
+}
+
+.box {
+    color: white;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.description {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    animation: bak 3s ease;
+}
+
+@keyframes bak {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.description .btn button {
+    margin-top: 10px;
+    margin-right: 15px;
+    padding: 7px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    background-color: pink;
+    color: white;
+    font-size: 1rem;
+    font-weight: 900;
+    text-shadow: 0 0 10px black;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.description .btn button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px pink;
+}
+
+.trailer {
+    position: relative;
+    z-index: 1;
+}
+
+.trailer video {
+    border-radius: 20px;
+    transition: transform 0.7s ease, box-shadow 0.5s ease;
+}
+
+.trailer figcaption {
+    text-align: end;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.trailer video:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px whitesmoke;
+}
+
+.back {
+    position: relative;
+    z-index: 10;
+    padding-left: 5.5rem;
+    padding-top: 2rem;
+}
+
+.back a {
+    color: white;
+    text-decoration: none;
+    background-color: pink;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-shadow: 0 0 5px black;
+}
+
+@media (max-width: 1024) {
+    .box {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .description {
+        width: 60vw;
+    }
+
+    .trailer video {
+        width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .description h1 {
+        font-size: 1.8rem;
+    }
+
+    .description span {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .trailer video {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .trailer figcaption {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+
+    .back {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .back a {
+        font-size: smaller;
+        padding: 0 10px;
+    }
+
+    body {
+        overflow: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .description h1 {
+        font-size: 1.5rem;
+    }
+
+    .description span {
+        font-size: 0.9rem;
+    }
+
+    .trailer video {
+        max-width: 320px;
+    }
+}
