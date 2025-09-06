@@ -123,6 +123,7 @@ body {
 }
 
 .trailer {
+    padding-top: 5rem;
     position: relative;
     z-index: 1;
 }
